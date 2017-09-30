@@ -7,6 +7,11 @@ public class RespuestaNumerica extends RespuestaAPregunta {
 	private PreguntaNumerica preguntaNumerica;
 	private int valor;
 	
+	public RespuestaNumerica(PreguntaNumerica _pregunta) {
+		super();
+		this.preguntaNumerica = _pregunta;
+	}
+
 	@Override
 	public boolean esCorrecta() {
 		return this.valor == this.getPregunta().getRespuestaCorrecta();

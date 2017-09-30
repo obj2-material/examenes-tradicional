@@ -1,5 +1,7 @@
 package ar.edu.unq.cpi.examenes.pregunta;
 
+import ar.edu.unq.cpi.examenes.respuesta.RespuestaAPregunta;
+import ar.edu.unq.cpi.examenes.respuesta.RespuestaNumerica;
 import ar.unq.ciu.basicos.RangoNumerico;
 
 public class PreguntaNumerica extends Pregunta {
@@ -23,5 +25,8 @@ public class PreguntaNumerica extends Pregunta {
 	public RangoNumerico getRangoAproximado() { return this.rangoAproximado; }
 	
 	public int getPuntajeAproximado() { return this.puntajeAproximado; }
+
+	@Override
+	public RespuestaAPregunta crearRespuesta() { return new RespuestaNumerica(this); }
 
 }

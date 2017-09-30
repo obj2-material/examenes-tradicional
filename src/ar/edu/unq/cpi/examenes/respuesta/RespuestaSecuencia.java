@@ -10,6 +10,12 @@ public class RespuestaSecuencia extends RespuestaAPregunta {
 	private PreguntaSecuencia preguntaSecuencia;
 	private List<String> secuenciaElegida;
 	
+	public RespuestaSecuencia(PreguntaSecuencia pregunta) {
+		super();
+		this.preguntaSecuencia = pregunta;
+	}
+
+
 	@Override
 	public boolean esCorrecta() {
 		return this.getSecuenciaElegida().equals(this.getPregunta().getSecuenciaCorrecta())

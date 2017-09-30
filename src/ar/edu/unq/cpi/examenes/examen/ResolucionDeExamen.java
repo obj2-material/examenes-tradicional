@@ -12,6 +12,10 @@ public class ResolucionDeExamen {
 	private List<RespuestaAPregunta> respuestas = new ArrayList<>();
 	private Examen examen;
 	
+	public ResolucionDeExamen(Examen _examen) {
+		super();
+		this.examen = _examen;
+	}
 	public List<RespuestaAPregunta> getRespuestas() { return this.respuestas; }
 	public void addToRespuestas(RespuestaAPregunta resp) { this.respuestas.add(resp); }
 	

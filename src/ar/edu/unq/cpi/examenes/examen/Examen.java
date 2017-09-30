@@ -22,4 +22,13 @@ public class Examen {
 	public boolean estaParaAprobar(ResolucionDeExamen resolucion) {
 		return resolucion.getPuntajeObtenido() >= this.getPuntajeMinimoAprobacion();
 	}
+	
+	/* para crear una nueva resolucion en blanco para este examen */
+	public ResolucionDeExamen crearResolucion() {
+		ResolucionDeExamen reso = new ResolucionDeExamen(this);
+		for (Pregunta preg : this.getPreguntas()) {
+			reso.addToRespuestas(preg.crearRespuesta());
+		}
+		return reso;
+	}
 }
